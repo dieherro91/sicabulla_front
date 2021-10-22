@@ -23,7 +23,7 @@ function App() {
     <Auth0Provider
         domain="misiontic-sicabulla.us.auth0.com"
         clientId="Bhbs7GkVqmyBPH6GYm8kLX20aEV6s6BI"
-        redirectUri='http://localhost:3000/Home'
+        redirectUri='https://sicabullafront.herokuapp.com/'
         audience='api-autenticacion-mintic'
         scope="read:current_user update:current_user_metadata">
           
