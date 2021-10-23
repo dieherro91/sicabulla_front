@@ -26,7 +26,7 @@ const TableUserEdit = () => {
             toast.info("Cargando registros de usuarios")
             const options = {
                 method: 'GET',
-                url: `http://localhost:5000/usuarios`,
+                url: `https://sicabullaback.herokuapp.com/usuarios`,
                 headers: {'Content-Type': 'application/json', Authorization: getToken() },
             };
 
@@ -115,7 +115,7 @@ const FilaUsuarios = ({ setEjecutarConsulta, dato, ejecutarConsulta }) => {
 
         const options = {
             method: 'PATCH',
-            url: `http://localhost:5000/usuarios/editar`,
+            url: `https://sicabullaback.herokuapp.com/usuarios/editar`,
             headers: { 'Content-Type': 'application/json',Authorization: getToken() },
             data: { ...infoNuevaUsuario },
         };
@@ -136,7 +136,7 @@ const FilaUsuarios = ({ setEjecutarConsulta, dato, ejecutarConsulta }) => {
     const EliminarUsuario = async () => {
         const options = {
             method: 'DELETE',
-            url: 'http://localhost:5000/usuarios/eliminar',
+            url: 'https://sicabullaback.herokuapp.com/usuarios/eliminar',
             headers: {'Content-Type': 'application/json', Authorization: getToken() },
             data: { id: dato._id },
         };
@@ -340,7 +340,7 @@ const InsertarNuevoUsuario = ({ setModalInsertar, modalInsertar, data, setEjecut
             value_boll = false;
             const options = {
                 method: 'POST',
-                url: 'http://localhost:5000/usuarios/nuevo',
+                url: 'https://sicabullaback.herokuapp.com/usuarios/nuevo',
                 headers: {'Content-Type': 'application/json', Authorization: getToken() },
                 data: datas
             }

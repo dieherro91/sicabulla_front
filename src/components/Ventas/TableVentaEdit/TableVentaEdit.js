@@ -26,7 +26,7 @@ const TableVentaEdit = () => {
             toast.info("Cargando registros de ventas")
             const options = {
                 method: 'GET',
-                url: `http://localhost:5000/ventas`,
+                url: `https://sicabullaback.herokuapp.com/ventas`,
                 headers: { 'Content-Type': 'application/json', Authorization: getToken() },
             };
 
@@ -115,7 +115,7 @@ const FilaVentas = ({ setEjecutarConsulta, dato, ejecutarConsulta }) => {
 
         const options = {
             method: 'PATCH',
-            url: `http://localhost:5000/ventas/editar`,
+            url: `https://sicabullaback.herokuapp.com/ventas/editar`,
             headers: { 'Content-Type': 'application/json', Authorization: getToken() },
             data: { ...infoNuevaVenta },
         };
@@ -136,7 +136,7 @@ const FilaVentas = ({ setEjecutarConsulta, dato, ejecutarConsulta }) => {
     const EliminarVenta = async () => {
         const options = {
             method: 'DELETE',
-            url: 'http://localhost:5000/ventas/eliminar',
+            url: 'https://sicabullaback.herokuapp.com/ventas/eliminar',
             headers: { 'Content-Type': 'application/json', Authorization: getToken() },
             data: { id: dato._id },
         };
@@ -341,7 +341,7 @@ const InsertarNuevoVenta = ({ setModalInsertar, modalInsertar, data, setEjecutar
             value_boll = false;
             const options = {
                 method: 'POST',
-                url: 'http://localhost:5000/ventas/nuevo',
+                url: 'https://sicabullaback.herokuapp.com/ventas/nuevo',
                 headers: { 'Content-Type': 'application/json', Authorization: getToken() },
                 data: datas
             }

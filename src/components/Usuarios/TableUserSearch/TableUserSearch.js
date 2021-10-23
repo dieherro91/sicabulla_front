@@ -25,7 +25,7 @@ const TableUserSearch = () => {
             toast.info("Cargando registros de usuarios")
             const options = {
                 method: 'GET',
-                url: `http://localhost:5000/usuarios`,
+                url: `https://sicabullaback.herokuapp.com/usuarios`,
                 headers: { 'Content-Type': 'application/json', Authorization: getToken() },
             };
             setLoading(true)

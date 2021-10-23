@@ -27,7 +27,7 @@ const TableVentaSearch = () => {
             toast.info("Cargando registros de ventas")
             const options = {
                 method: 'GET',
-                url: `http://localhost:5000/ventas`,
+                url: `https://sicabullaback.herokuapp.com/ventas`,
                 headers: { 'Content-Type': 'application/json', Authorization: getToken() },
             };
             setLoading(true)
