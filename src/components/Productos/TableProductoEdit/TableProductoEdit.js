@@ -26,7 +26,7 @@ const TableProductoEdit = () => {
             toast.info("Cargando registros de servicios")
             const options = {
                 method: 'GET',
-                url: `http://localhost:5000/servicios`,
+                url: `https://sicabullaback.herokuapp.com/servicios`,
                 headers: { 'Content-Type': 'application/json', Authorization: getToken() },
             };
 
@@ -115,7 +115,7 @@ const FilaProductos = ({ setEjecutarConsulta, dato, ejecutarConsulta, setModalIn
 
         const options = {
             method: 'PATCH',
-            url: `http://localhost:5000/servicios/editar`,
+            url: `https://sicabullaback.herokuapp.com/servicios/editar`,
             headers: { 'Content-Type': 'application/json', Authorization: getToken() },
             data: { ...infoNuevaProducto },
         };
@@ -136,7 +136,7 @@ const FilaProductos = ({ setEjecutarConsulta, dato, ejecutarConsulta, setModalIn
     const EliminarProducto = async () => {
         const options = {
             method: 'DELETE',
-            url: 'http://localhost:5000/servicios/eliminar',
+            url: 'https://sicabullaback.herokuapp.com/servicios/eliminar',
             headers: { 'Content-Type': 'application/json', Authorization: getToken() },
             data: { id: dato._id },
         };
@@ -341,7 +341,7 @@ const InsertarNuevoProducto = ({ setModalInsertar, modalInsertar, data, setEjecu
             value_boll = false;
             const options = {
                 method: 'POST',
-                url: 'http://localhost:5000/servicios/nuevo',
+                url: 'https://sicabullaback.herokuapp.com/servicios/nuevo',
                 headers: { 'Content-Type': 'application/json', Authorization: getToken() },
                 data: datas
             }
