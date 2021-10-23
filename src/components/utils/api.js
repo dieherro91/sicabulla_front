@@ -5,7 +5,7 @@ const getToken = () => {
 export const obtenertUsuario= async (successCallback,errorCallback) =>{
     const options = {
         method: 'GET',
-        url:'http://localhost:5000/usuarios/self',
+        url:'https://sicabullaback.herokuapp.com/',
         headers:{'Content-Type': 'application/json',
             Authorization:getToken(),
         }
