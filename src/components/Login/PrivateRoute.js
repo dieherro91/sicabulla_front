@@ -29,11 +29,6 @@ const PrivateRoute = ({ children }) => {
             //3. enviar el token al backend
             await obtenertUsuario((response)=>{
                         setUserData(response.data)
-                        console.log("inicio................")
-                        console.log(response)
-                        console.log('------------------------')
-                        console.log(response.data)
-                        console.log("final...............")
                     },
                                   (err)=>{
                                       console.log("error is: ",err);
