@@ -27,19 +27,12 @@ const PrivateRoute = ({ children }) => {
             localStorage.setItem('token',accessToken) //mejor usar cookies por que es mas seguro o usar un contexto context
             //console.log(accessToken)
             //3. enviar el token al backend
-            await obtenertUsuario(
-                (response)=>{
-                    setUserData(response.data)
-                    
-                },
-                (err)=>{
-                    console.log("cosas")
-                    console.log(response)
-                    console.log("error is: ",err)
-                    logout({returnTo: window.location.origin});
-                    localStorage.setItem('token',null);
+            await obtenertUsuario((response)=>{
+                        setUserData(response.data)},
+                                  (err)=>{console.log("error is: ",err);
+                                        logout({returnTo: window.location.origin});
+                                        localStorage.setItem('token',null);
                 });
-            
         };
         if (isAuthenticated){
             
