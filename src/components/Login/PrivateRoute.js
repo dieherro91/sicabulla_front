@@ -28,8 +28,15 @@ const PrivateRoute = ({ children }) => {
             //console.log(accessToken)
             //3. enviar el token al backend
             await obtenertUsuario((response)=>{
-                        setUserData(response.data)},
-                                  (err)=>{console.log("error is: ",err);
+                        setUserData(response.data)
+                        console.log("inicio................")
+                        console.log(response)
+                        console.log('------------------------')
+                        console.log(userData)
+                        console.log("final...............")
+                    },
+                                  (err)=>{
+                                      console.log("error is: ",err);
                                         logout({returnTo: window.location.origin});
                                         localStorage.setItem('token',null);
                 });
