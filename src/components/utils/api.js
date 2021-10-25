@@ -5,10 +5,10 @@ const getToken = () => {
 export const obtenertUsuario= async (successCallback,errorCallback) =>{
     const options = {
         method: 'GET',
-        url:'https://sicabullaback.herokuapp.com',
+        url:'https://sicabullaback.herokuapp.com/',
         headers:{'Content-Type': 'application/json',
             Authorization:getToken(),
         }
     }
     await axios.request(options).then(successCallback).catch(errorCallback);
-}//##"$"
+}

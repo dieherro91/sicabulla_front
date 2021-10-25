@@ -33,8 +33,6 @@ const PrivateRoute = ({ children }) => {
                     
                 },
                 (err)=>{
-                    console.log("ADASDASD")
-                    console.log(response)
                     console.log("error is: ",err)
                     logout({returnTo: window.location.origin});
                     localStorage.setItem('token',null);
