@@ -32,7 +32,7 @@ const PrivateRoute = ({ children }) => {
                         console.log("inicio................")
                         console.log(response)
                         console.log('------------------------')
-                        console.log(userData)
+                        console.log(response.data)
                         console.log("final...............")
                     },
                                   (err)=>{
